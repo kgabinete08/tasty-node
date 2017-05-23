@@ -1,3 +1,4 @@
 /node_modules
 variables.env
 readme-wes.md
+/public/uploads/*
