@@ -2,3 +2,7 @@
 variables.env
 readme-wes.md
 /public/uploads/*
+.DS_Store
+/public/dist/App.bundle.js
+/public/dist/App.bundle.js.map
+.eslintrc.json
