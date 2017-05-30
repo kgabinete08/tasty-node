@@ -1,6 +1,6 @@
 node_modules/
 variables.env
-variable.env.now
+variables.env.now
 readme-wes.md
 .DS_Store
 .eslintrc.json

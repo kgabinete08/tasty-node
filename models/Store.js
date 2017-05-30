@@ -78,7 +78,14 @@ storeSchema.statics.getTopStores = function() {
     // filter for only stores with > 2 reviews
     { $match: { 'reviews.1': { $exists: true } } },
     // add average rating field
-    { $addFields: { averageRating: { $avg: '$reviews.rating' } } },
+    // mongo 3.4 { $addFields: { averageRating: { $avg: '$reviews.rating' } } },
+    { $project: {
+      photo: '$$ROOT.photo',
+      name: '$$ROOT.name',
+      reviews: '$$ROOT.reviews',
+      slug: '$$ROOT.slug',
+      averageRating: { $avg: '$reviews.rating' }
+    } },
     // sort average review descending
     { $sort: { averageRating: -1 } },
     // limit to top 10 stores
