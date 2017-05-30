@@ -6,7 +6,7 @@
     "node": ">= 7.6.0"
   },
   "now": {
-    "dotenv": "variable.env.now"
+    "dotenv": "variables.env.now"
   },
   "scripts": {
     "start": "node ./start.js",
